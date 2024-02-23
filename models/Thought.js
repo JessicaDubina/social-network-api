@@ -11,7 +11,10 @@ const thoughtSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            //use getter method to format the timestamp
+            get: function(v){
+                //return formateddate
+                return `${v.getMonth()}/${v.getDate()}/${v.getFullYear()} at ${v.getHours()}:${v.getMinutes()}`
+            }
         },
         username: {
             type: String,
@@ -26,7 +29,9 @@ const thoughtSchema = new Schema(
       }
 );
 
-//Create a virtual called reactionCount that retrieves the length of the thought's reactions array field on query.
+thoughtSchema.virtual('reactionCount').get(function() {
+    return this.reactions.length;
+})
 
 const Thought = model('thought', thoughtSchema);
 

@@ -18,7 +18,10 @@ const reactionSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            //use getter method to format the timestamp
+            get: function(v){
+                //return formateddate
+                return `${v.getMonth()}/${v.getDate()}/${v.getFullYear()} at ${v.getHours()}:${v.getMinutes()}`
+            }
         },
     }
 )
