@@ -1,16 +1,10 @@
 const router = require('express').Router();
-// /api/users/:userId/friends/:friendId
+const { getAllThoughts, getThought, newThought } = require('../../controllers/thoughtsController');
 
-// POST to add a new friend to a user's friend list
+// /api/thoughts - get all thoughts, post new thought and push to user thoughts array
+router.route('/').get(getAllThoughts).post(newThought);
 
-// DELETE to remove a friend from a user's friend list
-
-// /api/thoughts
-
-// GET to get all thoughts
-
-// GET to get a single thought by its _id
-
-// POST to create a new thought (don't forget to push the created thought's _id to the associated user's thoughts array field)
+// /api/thoughts/:id - get a single thought by it's _id
+router.route('/:id').get(getThought);
 
 module.exports = router;
