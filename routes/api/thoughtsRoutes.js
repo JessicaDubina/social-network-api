@@ -1,15 +1,16 @@
 const router = require('express').Router();
-//import queries from controllers
+// /api/users/:userId/friends/:friendId
 
-// api/users - get all users
+// POST to add a new friend to a user's friend list
 
-// api/users/:id - get a user by _id
+// DELETE to remove a friend from a user's friend list
 
-// api/users - post new user
+// /api/thoughts
 
-// api/users/:id - put to update user by _id
+// GET to get all thoughts
 
-// api/users/:id - delete user by _id
-    //remove assoviated thoughts when deleted
+// GET to get a single thought by its _id
+
+// POST to create a new thought (don't forget to push the created thought's _id to the associated user's thoughts array field)
 
 module.exports = router;
