@@ -12,7 +12,8 @@ This app uses express and mongoose. Please npm install prior to use.
 
 Please refer to the demo video link below
 
-[Demo Videol]: (https://drive.google.com/file/d/1PGUcsJvEn1wCw3s7Thg2-ezFmkuaYdzy/view)
+[Demo video link]: https://drive.google.com/file/d/1PGUcsJvEn1wCw3s7Thg2-ezFmkuaYdzy/view
+[Demo video link]
 
 ## Credits
 
